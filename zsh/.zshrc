@@ -117,7 +117,7 @@ precmd () {
 # 末尾に空白をつけることで改行される
 PROMPT=" 
 %F{cyan}%~%f"
-PROMPT=${PROMPT}'%F{green} ${BRANCH_NAME}%F{green}${GIT_NON_DIFF}%F{red}${GIT_HAS_DIFF} 
+PROMPT=${PROMPT}'%F{green} ${BRANCH_NAME} %F{green}${GIT_NON_DIFF}%F{red}${GIT_HAS_DIFF} 
 %f$ '
 
 
