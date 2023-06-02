@@ -121,9 +121,9 @@ PROMPT=${PROMPT}'%F{green}  ${BRANCH_NAME} ${GIT_NON_DIFF}%F{red}${GIT_HAS_DIFF}
 %f$ '
 
 
-alias vim="nvim"
 
 export PATH="$PATH:$HOME/.local/share/nvim-linux64/bin"
+alias vim="nvim"
 # Use modern completion system
 # autoload -Uz compinit
 # compinit
@@ -145,3 +145,5 @@ export PATH="$PATH:$HOME/.local/share/nvim-linux64/bin"
 
 # zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 # zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
+source /opt/ros/noetic/setup.zsh
+source /home/daiki/catkin_ws/devel/setup.zsh
