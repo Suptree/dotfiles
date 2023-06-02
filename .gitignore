@@ -1,0 +1,14 @@
+### ignore all ###
+/*
+/.**
+
+# ### not ignore ###
+!/setup.sh
+!/zsh/
+!/zsh/zshrc
+
+!/neovim/
+!/neovim/vimrc
+
+!/README.md
+!.gitignore
