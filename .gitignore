@@ -8,6 +8,8 @@
 !/zsh/zshrc
 
 !/neovim/
+!/neovim/dein.toml
+!/neovim/dein_lazy.toml
 !/neovim/vimrc
 
 !/README.md
