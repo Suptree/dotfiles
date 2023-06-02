@@ -121,7 +121,7 @@ PROMPT=${PROMPT}'%F{green}  ${BRANCH_NAME} ${GIT_NON_DIFF}%F{red}${GIT_HAS_DIFF}
 %f$ '
 
 
-alias vim="nvim"
+# alias vim="nvim"
 
 
 # Use modern completion system
