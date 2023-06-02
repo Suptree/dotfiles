@@ -121,9 +121,9 @@ PROMPT=${PROMPT}'%F{green}  ${BRANCH_NAME} ${GIT_NON_DIFF}%F{red}${GIT_HAS_DIFF}
 %f$ '
 
 
-# alias vim="nvim"
+alias vim="nvim"
 
-
+export PATH="$PATH:$HOME/.local/share/nvim-linux64/bin"
 # Use modern completion system
 # autoload -Uz compinit
 # compinit
