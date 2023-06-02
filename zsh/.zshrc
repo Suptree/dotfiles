@@ -104,7 +104,7 @@ precmd () {
     export GIT_NON_DIFF=""
   else 
     export GIT_HAS_DIFF=""
-    export GIT_NON_DIFF="✔"
+    export GIT_NON_DIFF="〇"
   fi
   # git管理されているか確認
   git status --porcelain >/dev/null 2>&1
