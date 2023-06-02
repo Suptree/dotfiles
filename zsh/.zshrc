@@ -100,11 +100,11 @@ setopt prompt_subst #プロンプト表示する度に変数を展開
 
 precmd () { 
   if [ -n "$(git status --short 2>/dev/null)" ];then
-    export GIT_HAS_DIFF="✗"
+    export GIT_HAS_DIFF="⚡"
     export GIT_NON_DIFF=""
   else 
     export GIT_HAS_DIFF=""
-    export GIT_NON_DIFF="〇"
+    export GIT_NON_DIFF="✓"
   fi
   # git管理されているか確認
   git status --porcelain >/dev/null 2>&1
@@ -117,7 +117,7 @@ precmd () {
 # 末尾に空白をつけることで改行される
 PROMPT=" 
 %F{cyan}%~%f"
-PROMPT=${PROMPT}'%F{green}  ${BRANCH_NAME} %F{yellow}${GIT_NON_DIFF}%F{red}${GIT_HAS_DIFF} 
+PROMPT=${PROMPT}'%F{green} ${BRANCH_NAME}%F{green}${GIT_NON_DIFF}%F{red}${GIT_HAS_DIFF} 
 %f$ '
 
 
