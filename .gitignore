@@ -7,10 +7,10 @@
 !/zsh/
 !/zsh/zshrc
 
-!/neovim/
-!/neovim/dein.toml
-!/neovim/dein_lazy.toml
-!/neovim/vimrc
+!/nvim/
+!/nvim/dein.toml
+!/nvim/dein_lazy.toml
+!/nvim/vimrc
 
 !/README.md
 !.gitignore
