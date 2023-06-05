@@ -1,18 +1,8 @@
 [[plugins]]
-repo = 'iamcco/markdown-preview.nvim'
+build = 'sh -c "cd app && yarn install"'
 on_ft = ['markdown', 'pandoc.markdown', 'rmd']
-build = '''
-cd app & yarn install
-'''
+repo = 'iamcco/markdown-preview.nvim'
 
-[[plugins]]
-repo = 'junegunn/fzf'
-build_on = '''
-./install --all
-'''
-[[plugins]]
-repo = 'junegunn/fzf.vim'
-merged = 0
 
 [[plugins]]
 repo = 'prabirshrestha/vim-lsp'
@@ -39,7 +29,7 @@ repo = 'joshdick/onedark.vim'
 repo = 'nvim-treesitter/nvim-treesitter'
 
 [[plugins]]
-repo= 'sheerun/vim-polyglot'
+repo = 'sheerun/vim-polyglot'
 
 [[plugins]]
 repo = 'mattn/vim-lsp-settings'
@@ -49,3 +39,75 @@ repo = 'Shougo/ddc.vim'
 
 [[plugins]]
 repo = 'shun/ddc-vim-lsp'
+
+# ディレクトリ表示
+[[plugins]]
+hook_add = '''
+let g:fern#default_hidden=1
+'''
+repo = 'lambdalisue/fern.vim'
+# # ファイル検索
+# [[plugins]]
+# repo = 'nvim-telescope/telescope.nvim'
+# # telescope.nvimが依存
+# [[plugins]]
+# repo = 'nvim-lua/plenary.nvim'
+# [[plugins]]
+# repo ='sharkdp/fd'
+# comment out
+[[plugins]]
+repo = 'tpope/vim-commentary'
+
+
+###
+# fuzzy-finder
+###
+
+
+# telescope.nvimが依存
+[[plugins]]
+repo = 'nvim-lua/plenary.nvim'
+
+
+[[plugins]]
+depends = ['airblade/vim-rooter']
+hook_add = '''
+" Search for Project root
+" Find files using Telescope command-line sugar.
+nnoremap <C-p> <cmd>Telescope find_files<cr>
+nnoremap <C-g> <cmd>Telescope live_grep<cr>
+
+" Using Lua functions
+lua <<EOF
+require('telescope').setup{
+  defaults = {
+    mappings = {
+      n = {
+        ["<esc>"] = require('telescope.actions').close,
+      },
+      i = {
+        ["<esc>"] = require('telescope.actions').close,
+        ["<C-a>"] = require('telescope.actions').send_to_qflist + require('telescope.actions').open_qflist,
+        ["<C-q>"] = require('telescope.actions').send_selected_to_qflist + require('telescope.actions').open_qflist
+      }
+    }
+  }
+}
+EOF
+'''
+repo = 'nvim-telescope/telescope.nvim'
+
+# telescope-frequencyが依存
+[[plugins]]
+repo = 'tami5/sqlite.lua'
+
+# telescope-frequencyが依存
+
+[[plugins]]
+hook_add = '''
+nnoremap <C-f> <cmd>Telescope frecency<cr>
+lua << EOF
+require"telescope".load_extension("frecency")
+EOF
+'''
+repo = 'nvim-telescope/telescope-frecency.nvim'

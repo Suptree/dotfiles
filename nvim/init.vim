@@ -128,22 +128,29 @@ set autochdir
 
 " Key bindの設定
 " 検索ハイライトの消去
+"
+let mapleader = "\<Space>"
 nnoremap <silent> <Esc><Esc> :nohlsearch<CR>
 " 段落の移動
 nnoremap <C-j> }
 nnoremap <C-k> {
 nnoremap <C-h> b
 nnoremap <C-l> w
+" ファイル検索
+nnoremap <C-p> :Telescope find_files<CR>
+"" require sudo apt install ripgrep
+"" require sudo apt install fd-find
+nnoremap <C-g> :Telescope live_grep<cr>
 
 "ターミナルを垂直で開く
-nnoremap <C-n>\ :vert term ++close
+nnoremap <C-n>\ :vert term ++close<CR>
 "ターミナルを水平で開く
 nnoremap <C-n>- :bo term ++close
 " ターミナルを新しいタブページで開く
 nnoremap <C-t> :tab term ++close
 " 画面分割しlazygitを開く
 nnoremap <silent><C-n>g :vert term ++close lazygit<CR>
-nnoremap <silent><C-e> :NERDTreeToggle<CR>
+nnoremap <silent><C-e> :Fern . -drawer -toggle<CR>
 nnoremap ; :
 inoremap jk <ESC>
 
@@ -178,11 +185,11 @@ nnoremap sp gT
 "nnoremap sl <C-w>l
 "nnoremap sl <C-w>l
 " 行の最初の文字の前にコメント文字をトグル
-nmap <Leader>c <Plug>(caw:hatpos:toggle)
-vmap <Leader>c <Plug>(caw:hatpos:toggle)
+nmap <Leader>c <cmd>Commentary<CR>
+vmap <Leader>c gc
 " 行頭にコメントをトグル
-nmap <Leader>, <Plug>(caw:zeropos:toggle)
-vmap <Leader>, <Plug>(caw:zeropos:toggle)
+" nmap <Leader>, <Plug>(caw:zeropos:toggle)
+" vmap <Leader>, <Plug>(caw:zeropos:toggle)
 
 nnoremap <C-i> A
 " inoremap <C-j> <Down>
