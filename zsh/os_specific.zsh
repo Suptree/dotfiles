@@ -1,4 +1,4 @@
-# OS別設定 (os_specific_config.zsh)
+# OS別設定 (os_specific.zsh)
 
 # OSタイプに基づく条件分岐
 case "${OSTYPE}" in

@@ -1,4 +1,4 @@
-# ヒストリ設定 (history_config.zsh)
+# ヒストリ設定 (history.zsh)
 
 # ヒストリファイルのパス
 HISTFILE=~/.zsh_history

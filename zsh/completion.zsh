@@ -1,4 +1,4 @@
-# 補完設定 (completion_config.zsh)
+# 補完設定 (completion.zsh)
 
 # 補完機能を有効にする
 autoload -Uz compinit

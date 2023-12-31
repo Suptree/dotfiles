@@ -4,19 +4,19 @@
 source ~/path/to/env_variables.zsh
 
 # ヒストリ設定
-source ~/path/to/history_config.zsh
+source ~/path/to/history.zsh
 
 # 補完設定
-source ~/path/to/completion_config.zsh
+source ~/path/to/completion.zsh
 
 # エイリアス設定
 source ~/path/to/aliases.zsh
 
 # OS別の設定
-source ~/path/to/os_specific_config.zsh
+source ~/path/to/os_specific.zsh
 
 # プロンプト設定
-source ~/path/to/prompt_config.zsh
+source ~/path/to/prompt.zsh
 
 # その他の設定やカスタマイズ
 # ここに直接.zshrcに追加したい設定や関数を記述

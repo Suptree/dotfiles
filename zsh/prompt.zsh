@@ -1,4 +1,4 @@
-# プロンプト設定 (prompt_config.zsh)
+# プロンプト設定 (prompt.zsh)
 
 # プロンプト表示する度に変数を展開
 setopt prompt_subst
