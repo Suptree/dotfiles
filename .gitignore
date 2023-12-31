@@ -13,10 +13,10 @@
 !/zsh/os_specific_config.zsh
 !/zsh/prompt_config.zsh
 
-!/nvim/
 !/nvim/dein.toml
 !/nvim/dein_lazy.toml
-!/nvim/vimrc
+!/nvim/init.vim
+!/nvim/README.md
 
 !/README.md
 !.gitignore

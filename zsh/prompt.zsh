@@ -23,6 +23,8 @@ git_prompt() {
         # 未ステージングの変更があるかチェック
         if [[ $(echo "$git_status" | grep '^[ MDAU]') ]]; then
             changes="*"
+            # ANSI Escape Code を使って文字色を変更 
+            # 11: Yellow
             color="%F{11}"
         fi
 
@@ -42,4 +44,6 @@ git_prompt() {
 ## カレントディレクトリの表示
 ## Gitの情報表示
 ## プロンプトの終了記号（通常ユーザーは'$', rootユーザーは'#'）
-PROMPT='%F{cyan}%~%f $(git_prompt)%# ' 
+## ANSI Escape Code を使って文字色を変更 
+## 14: Cyan
+PROMPT='%F{14}%~%f $(git_prompt)%# ' 

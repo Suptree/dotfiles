@@ -29,3 +29,6 @@ alias -g L='| less'
 alias -g G='| grep'
 
 # ここに他のエイリアスを追加
+
+# nvimのエイリアス
+alias vim="nvim"
