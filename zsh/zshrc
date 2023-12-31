@@ -19,8 +19,12 @@ source ~/dotfiles/zsh/os_specific.zsh
 source ~/dotfiles/zsh/prompt.zsh
 
 # その他の設定やカスタマイズ
-# ここに直接.zshrcに追加したい設定や関数を記述
 
-# 特定のプロジェクトやフレームワークに依存する追加設定（例: ROS）
-# source /opt/ros/noetic/setup.zsh
-# source /home/daiki/catkin_ws/devel/setup.zsh
+export PATH=$HOME/.nodebrew/current/bin:$PATH
+
+export PATH=$PATH:/usr/local/texlive/2023/bin/universal-darwin
+
+alias vpn-nishilab='sudo /usr/local/sbin/sstpc --log-stderr --log-level 1 --cert-warn --user minobe --password 10daiki23 nishilab-meeting.vpnazure.net usepeerdns require-mschap-v2 noauth noipdefault defaultroute refuse-eap noccp --tls-ext'
+
+export PATH="/usr/local/sbin:$PATH"
+

@@ -16,6 +16,9 @@
 !/nvim/dein.toml
 !/nvim/dein_lazy.toml
 !/nvim/init.vim
+!/nvim/basic_settings.vim
+!/nvim/dein_config.vim
+!/nvim/key_mappings.vim
 !/nvim/README.md
 
 !/README.md

@@ -1,46 +1,4 @@
 
-let s:dein_dir = expand('~/.cache/dein')
-let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
-" dein.vimがインストールされていない場合はインストール
-if &runtimepath !~# '/dein.vim'
-if !isdirectory(s:dein_repo_dir)
-    execute '!git clone https://github.com/Shougo/dein.vim' s:dein_repo_dir
-    endif
-    execute 'set runtimepath^=' . s:dein_repo_dir
-endif
-
-" プラグインのdein.tomlとdein_lazy.tomlに記述 
-if dein#load_state(s:dein_dir)
-    call dein#begin(s:dein_dir)
-
-    " .toml file
-    let s:rc_dir = expand('~/dotfiles/nvim')
-    if !isdirectory(s:rc_dir)
-        call mkdir(s:rc_dir, 'p')
-    endif
-    let s:toml = s:rc_dir . '/dein.toml'
-    let s:lazy_toml = s:rc_dir . '/dein_lazy.toml'
-
-    " read toml and cache
-    call dein#load_toml(s:toml, {'lazy': 0})
-    call dein#load_toml(s:lazy_toml, {'lazy': 1})
-
-    " end settings
-    call dein#end()
-    call dein#save_state()
-endif
-" インストールされていないプラグインがある場合はインストール 
-if dein#check_install()
-    call dein#install()
-endif
-
-" dein.tomlやdein_lazy.tomlから削除したプラグインを削除する 
-let s:removed_plugins = dein#check_clean()
-if len(s:removed_plugins) > 0
-    call map(s:removed_plugins, "delete(v:val, 'rf')")
-    call dein#recache_runtimepath()
-endif 
-
 " テーマ
 colorscheme onedark
 
@@ -116,7 +74,7 @@ set showmatch
 set laststatus=2
 
 "クリップボードコピー
-" set clipboard+=unnamed
+set clipboard+=unnamed
 
 "短形選択
 set virtualedit=block
@@ -129,78 +87,78 @@ set autochdir
 " Key bindの設定
 " 検索ハイライトの消去
 "
-let mapleader = "\<Space>"
-nnoremap <silent> <Esc><Esc> :nohlsearch<CR>
+"let mapleader = "\<Space>"
+"nnoremap <silent> <Esc><Esc> :nohlsearch<CR>
 " 段落の移動
-nnoremap <C-j> }
-nnoremap <C-k> {
-nnoremap <C-h> b
-nnoremap <C-l> w
+"nnoremap <C-j> }
+"nnoremap <C-k> {
+"nnoremap <C-h> b
+"nnoremap <C-l> w
 " ファイル検索
-nnoremap <C-p> :Telescope find_files<CR>
+"nnoremap <C-p> :Telescope find_files<CR>
 "" require sudo apt install ripgrep
 "" require sudo apt install fd-find
-nnoremap <C-g> :Telescope live_grep<cr>
+"nnoremap <C-g> :Telescope live_grep<cr>
 
 "ターミナルを垂直で開く
-nnoremap <C-n>\ :vert term ++close<CR>
+"nnoremap <C-n>\ :vert term ++close<CR>
 "ターミナルを水平で開く
-nnoremap <C-n>- :bo term ++close
+"nnoremap <C-n>- :bo term ++close
 " ターミナルを新しいタブページで開く
-nnoremap <C-t> :tab term ++close
+"nnoremap <C-t> :tab term ++close
 " 画面分割しlazygitを開く
-nnoremap <silent><C-n>g :vert term ++close lazygit<CR>
-nnoremap <silent><C-e> :Fern . -drawer -toggle<CR>
-nnoremap ; :
-inoremap jk <ESC>
+"nnoremap <silent><C-n>g :vert term ++close lazygit<CR>
+"nnoremap <silent><C-e> :Fern . -drawer -toggle<CR>
+"nnoremap ; :
+"inoremap jk <ESC>
 
 "同じ行でも下をj k を押したら一つ下にいく
-nnoremap j gj
-nnoremap k gk
+"nnoremap j gj
+"nnoremap k gk
 " 画面増やすためのキーバインド
-nnoremap s <Nop>
+"nnoremap s <Nop>
 " nnoremap ss :split<CR>
-nnoremap sv :vsplit<CR>
-nnoremap sh <C-w>h
-nnoremap sj <C-w>j
-nnoremap sk <C-w>k
-nnoremap sl <C-w>l
+"nnoremap sv :vsplit<CR>
+"nnoremap sh <C-w>h
+"nnoremap sj <C-w>j
+"nnoremap sk <C-w>k
+"nnoremap sl <C-w>l
 
-nnoremap sH <C-w>H
-nnoremap sJ <C-w>J
-nnoremap sK <C-w>K
-nnoremap sL <C-w>L
+"nnoremap sH <C-w>H
+"nnoremap sJ <C-w>J
+"nnoremap sK <C-w>K
+"nnoremap sL <C-w>L
 
-nnoremap sw <C-w>w
-nnoremap sr <C-w>r
+"nnoremap sw <C-w>w
+"nnoremap sr <C-w>r
 
-nnoremap sq :q<CR>
-nnoremap sQ :bd<CR>
+"nnoremap sq :q<CR>
+"nnoremap sQ :bd<CR>
 
-nnoremap st :tabnew<CR>
-nnoremap sn gt
-nnoremap sp gT
+"nnoremap st :tabnew<CR>
+"nnoremap sn gt
+"nnoremap sp gT
 
 " nnoremap sl <C-w>l
 "nnoremap sl <C-w>l
 "nnoremap sl <C-w>l
 " 行の最初の文字の前にコメント文字をトグル
-nmap <Leader>c <cmd>Commentary<CR>
-vmap <Leader>c gc
+"nmap <Leader>c <cmd>Commentary<CR>
+"vmap <Leader>c gc
 " 行頭にコメントをトグル
 " nmap <Leader>, <Plug>(caw:zeropos:toggle)
 " vmap <Leader>, <Plug>(caw:zeropos:toggle)
 
-nnoremap <C-i> A
+"nnoremap <C-i> A
 " inoremap <C-j> <Down>
 " inoremap <C-k> <Up>
 " inoremap <C-h> <Left>
 " inoremap <C-l> <Right>
-inoremap { {}<LEFT>
-inoremap [ []<LEFT>
-inoremap ( ()<LEFT>
-inoremap " ""<LEFT>
-inoremap ' ''<LEFT>
+"inoremap { {}<LEFT>
+"inoremap [ []<LEFT>
+"inoremap ( ()<LEFT>
+"inoremap " ""<LEFT>
+"inoremap ' ''<LEFT>
 " 補完表示時のEnterで改行をしない
 " inoremap <expr><CR>  pumvisible() ? "<C-y>" : "<CR>"
 "
@@ -212,12 +170,12 @@ inoremap ' ''<LEFT>
 " call submode#enter_with('bufmove', 'n', '', 's<', '<C-w><')
 " call submode#map('bufmove', 'n', '', '>', '<C-w>>')
 " call submode#map('bufmove', 'n', '', '<', '<C-w><')
-set nocompatible
+"set nocompatible
 "カーソルを行頭，行末で止まらないようにする
 set whichwrap=b,s,h,l,<,>,[,]
 "BSで削除できるものを指定する
 " indent  : 行頭の空白
 " eol     : 改行
 " start   : 挿入モード開始位置より手前の文字
-set backspace=indent,eol,start
+"set backspace=indent,eol,start
 
