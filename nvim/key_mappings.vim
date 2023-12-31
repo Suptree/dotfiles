@@ -67,6 +67,7 @@ vmap <Leader>c <cmd>Commentary<CR>
 " インサートモードでのキーバインド
 " ノーマルモードへの素早い切り替え
 inoremap jk <ESC>
+nnoremap ; :
 
 " 自動括弧補完
 inoremap { {}<Left>
