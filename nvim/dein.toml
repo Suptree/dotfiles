@@ -40,6 +40,7 @@ repo = 'Shougo/ddc.vim'
 [[plugins]]
 repo = 'shun/ddc-vim-lsp'
 
+
 # ディレクトリ表示
 [[plugins]]
 hook_add = '''
@@ -111,3 +112,6 @@ require"telescope".load_extension("frecency")
 EOF
 '''
 repo = 'nvim-telescope/telescope-frecency.nvim'
+
+[[plugins]]
+repo='kdheepak/lazygit.nvim'

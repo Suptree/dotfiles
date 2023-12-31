@@ -78,3 +78,9 @@ set whichwrap=b,s,h,l,<,>,[,]
 " eol     : 改行
 " start   : 挿入モード開始位置より手前の文字
 set backspace=indent,eol,start
+
+" ターミナルを開いたらに常にinsertモードに入る
+autocmd TermOpen * :startinsert
+" ターミナルモードで行番号を非表示
+autocmd TermOpen * setlocal norelativenumber
+autocmd TermOpen * setlocal nonumber
