@@ -27,8 +27,9 @@ nnoremap <silent> tt <cmd>terminal<CR>
 " 下分割でターミナルモードを起動
 nnoremap <silent> tx <cmd>belowright new<CR><cmd>terminal<CR>
 
+
 " 画面分割しlazygitを開く
-nnoremap <silent><C-n>g :vert term ++close lazygit<CR>
+nnoremap <silent> gg :LazyGit<CR>
 
 " ファイルエクスプローラ (Fernが必要)
 nnoremap <silent><C-e> :Fern . -drawer -toggle<CR>
