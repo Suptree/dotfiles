@@ -6,6 +6,12 @@
 !/setup.sh
 !/zsh/
 !/zsh/zshrc
+!/zsh/aliases.zsh
+!/zsh/completion_config.zsh
+!/zsh/env_variables.zsh
+!/zsh/history_config.zsh
+!/zsh/os_specific_config.zsh
+!/zsh/prompt_config.zsh
 
 !/nvim/
 !/nvim/dein.toml

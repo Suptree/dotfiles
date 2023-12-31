@@ -1,0 +1,26 @@
+# .zshrc
+
+# 環境変数設定
+source ~/path/to/env_variables.zsh
+
+# ヒストリ設定
+source ~/path/to/history_config.zsh
+
+# 補完設定
+source ~/path/to/completion_config.zsh
+
+# エイリアス設定
+source ~/path/to/aliases.zsh
+
+# OS別の設定
+source ~/path/to/os_specific_config.zsh
+
+# プロンプト設定
+source ~/path/to/prompt_config.zsh
+
+# その他の設定やカスタマイズ
+# ここに直接.zshrcに追加したい設定や関数を記述
+
+# 特定のプロジェクトやフレームワークに依存する追加設定（例: ROS）
+# source /opt/ros/noetic/setup.zsh
+# source /home/daiki/catkin_ws/devel/setup.zsh
