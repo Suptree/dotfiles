@@ -4,6 +4,7 @@
 export LANG=en_US.UTF-8
 
 # LSCOLORSの設定
+# export LSCOLORS='ExGxBxDxCxEgEdxbxgxcxd'
 export LSCOLORS=cxfxcxdxbxegedabagacad
 
 # PATHの追加

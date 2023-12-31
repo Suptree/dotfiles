@@ -24,6 +24,8 @@ zstyle ':completion:*:processes' command 'ps x -o pid,s,args'
 
 # 補完候補を色分けする
 # '${(s.:.)LS_COLORS}': LS_COLORSの設定に基づいて色を設定
-zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+# zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+# 補完機能のスタイル設定
+zstyle ':completion:*' list-colors 'di=32' 'ex=31' 'ln=35' 'pi=33' 'so=33' 'bd=34;46' 'cd=34;43' 'or=34;41' 'mi=0;34;46' 'su=0;34;43' 'sg=0;34;43' 'tw=0;34;42' 'ow=0;34;42'
 
 # ここに他の補完設定を追加
