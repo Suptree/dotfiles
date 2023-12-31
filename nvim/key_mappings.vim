@@ -8,19 +8,24 @@ nnoremap <silent> <Esc><Esc> :nohlsearch<CR>
 " 段落の移動
 nnoremap <C-j> }
 nnoremap <C-k> {
-
-" 単語の移動
+" 
+" " 単語の移動
 nnoremap <C-h> b
 nnoremap <C-l> w
 
 " ファイル検索 (Telescopeが必要)
-nnoremap <C-p> :Telescope find_files<CR>
-nnoremap <C-g> :Telescope live_grep<CR>
+" nnoremap <C-p> :Telescope find_files<CR>
+" nnoremap <C-g> :Telescope live_grep<CR>
+
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
 
 " ターミナルの操作
-nnoremap <C-n>\ :vert term ++close<CR>
-nnoremap <C-n>- :bo term ++close<CR>
-nnoremap <C-t> :tab term ++close<CR>
+" 新規タブでターミナルモードを起動
+nnoremap <silent> tt <cmd>terminal<CR>
+" 下分割でターミナルモードを起動
+nnoremap <silent> tx <cmd>belowright new<CR><cmd>terminal<CR>
 
 " 画面分割しlazygitを開く
 nnoremap <silent><C-n>g :vert term ++close lazygit<CR>
@@ -66,8 +71,8 @@ inoremap jk <ESC>
 inoremap { {}<Left>
 inoremap [ []<Left>
 inoremap ( ()<Left>
-inoremap " ""<Left>
-inoremap ' ''<Left>
+" inoremap " ""<Left>
+" inoremap ' ''<Left>
 
 " その他のカスタムキーバインド
 " 必要に応じてここに追加
