@@ -1,22 +1,22 @@
 # .zshrc
 
 # 環境変数設定
-source ~/path/to/env_variables.zsh
+source ~/dotfiles/zsh/env_variables.zsh
 
 # ヒストリ設定
-source ~/path/to/history.zsh
+source ~/dotfiles/zsh/history.zsh
 
 # 補完設定
-source ~/path/to/completion.zsh
+source ~/dotfiles/zsh/completion.zsh
 
 # エイリアス設定
-source ~/path/to/aliases.zsh
+source ~/dotfiles/zsh/aliases.zsh
 
 # OS別の設定
-source ~/path/to/os_specific.zsh
+source ~/dotfiles/zsh/os_specific.zsh
 
 # プロンプト設定
-source ~/path/to/prompt.zsh
+source ~/dotfiles/zsh/prompt.zsh
 
 # その他の設定やカスタマイズ
 # ここに直接.zshrcに追加したい設定や関数を記述

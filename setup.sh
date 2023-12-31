@@ -9,7 +9,7 @@ ZSHRC="${HOME}/.zshrc"
 if [ -f "$ZSHRC" ]; then
     mv "$ZSHRC" "${ZSHRC}.backup"
 fi
-ln -sf "${DOTFILES_DIR}/zsh/.zshrc" "$ZSHRC"
+ln -sf "${DOTFILES_DIR}/zsh/zshrc" "$ZSHRC"
 
 # nvim設定のシンボリックリンクを作成
 NVIM_DIR="${HOME}/.config/nvim"
