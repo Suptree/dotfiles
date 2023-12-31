@@ -13,6 +13,7 @@
 !/zsh/os_specific_config.zsh
 !/zsh/prompt_config.zsh
 
+
 !/nvim/dein.toml
 !/nvim/dein_lazy.toml
 !/nvim/init.vim
